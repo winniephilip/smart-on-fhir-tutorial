@@ -11,14 +11,24 @@
   document.getElementById("demo").innerHTML =JSON.stringify(data, null, 2);}
   ).catch(console.error);
 
+function myPatientMedication(){
+  let x = document.forms["patientportal"]["pid"].value;
+  console.log("Selected PatientID==========>" + x)
+  client.request("Patient/"+x).then((data) => {
+  console.log(data);
+  document.getElementById("demo").innerHTML =JSON.stringify(data, null, 2);}
+  ).catch(console.error);
+}
 
 </script>
 </head>
 <body>
-
-  
+<form name="patientportal">
+<button type="button" onclick="myPatientMedication()">select patient id</button>
+  <input type="text" name="pid">
 <h2>Demo JavaScript in Head</h2>
 
 <p id="demo">A Paragraph.</p>
+</form>
 </body>
 </html>
