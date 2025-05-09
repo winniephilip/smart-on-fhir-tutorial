@@ -1,5 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
 <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
 
+<script>
+  const client = FHIR.client("https://r3.smarthealthit.org");
+client.request("Patient").then(
+  console.log
+  document.getElementById("demo").innerHTML ="data").catch(console.error);
 
-const client = FHIR.client("https://r3.smarthealthit.org");
-client.request("Patient").then(console.log).catch(console.error);
+
+
+
+</script>
+</head>
+<body>
+
+  
+<h2>Demo JavaScript in Head</h2>
+
+<p id="demo">A Paragraph.</p>
+</body>
+</html>
