@@ -7,7 +7,7 @@
 <script>
   const client = FHIR.client("https://r3.smarthealthit.org");
 client.request("Patient").then((data => 
-  console.log;
+  console.log(data);
 document.getElementById("demo").innerHTML =data;
   ).catch(console.error);
 //
